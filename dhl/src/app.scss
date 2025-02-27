@@ -1,0 +1,188 @@
+@import "@fontsource-variable/inter";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@mixin theme-light {
+  --background-surface: #ffffff;
+  --background-light: #fbfbfc;
+  --background-medium: #f7f7f7;
+  --background-contrast: #2c2c2c;
+
+  --text-contrast: #ffffff;
+  --text-primary: #2c2c2c;
+  --text-secondary: #a0a3a6;
+  --text-hint: #d9dbdd;
+  --text-disabled: #a3a3a3;
+
+  --action-light: rgba(35, 55, 55, 0.05);
+  --action-dark: rgba(16, 26, 35, 0.1);
+  --action-disabled: rgba(0, 0, 0, 0.04);
+
+  --border: #2c2c2c;
+  --border-light: #e7e8e9;
+  --border-dark: #d9dbdd;
+  --border-focus: #98a2b324;
+  --border-disabled: #d4d4d4;
+
+  --divider: #f4f5f5;
+  --backdrop: rgba(16, 26, 35, 0.1);
+
+  --accent-contrast: #ffffff;
+  --accent-background: #eff6ff;
+  --accent-primary: #2563eb;
+  --accent-light: #3b82f6;
+  --accent-medium: #293e7a;
+
+  --success-light: #d1fae5;
+  --success-primary: #41b871;
+  --success-medium: #367c50;
+
+  --error-light: #fee2e2;
+  --error-primary: #ef4444;
+  --error-medium: #b91c1c;
+
+  --warning-light: #fffbd1;
+  --warning-primary: #f5d90a;
+  --warning-medium: #946800;
+
+  --info-light: #dbeafe;
+  --info-primary: #3b82f6;
+  --info-medium: #293e7a;
+}
+
+@mixin theme-dark {
+  --background-surface: #171819;
+  --background-light: #1d1e1f;
+  --background-medium: #373739;
+  --background-contrast: #505053;
+
+  --text-contrast: #e5e5e6;
+  --text-primary: #e5e5e6;
+  --text-secondary: #828387;
+  --text-hint: #505053;
+  --text-disabled: #525252;
+
+  --action-light: rgba(232, 252, 253, 0.05);
+  --action-dark: rgba(241, 241, 249, 0.14);
+  --action-disabled: rgba(255, 255, 255, 0.06);
+
+  --border: #e5e5e6;
+  --border-light: #2c2c2e;
+  --border-dark: #373739;
+  --border-focus: #98a2b324;
+  --border-disabled: #262626;
+
+  --divider: #2c2c2e;
+  --backdrop: rgba(5, 5, 6, 0.4);
+
+  --accent-contrast: #ffffff;
+  --accent-background: rgba(107, 157, 243, 0.21);
+  --accent-primary: #148cf5;
+  --accent-light: #148cf5;
+  --accent-medium: #2d5496;
+
+  --success-light: #30574a;
+  --success-primary: #6ecb90;
+  --success-medium: #41b870;
+
+  --error-light: #50302f;
+  --error-primary: #ef4444;
+  --error-medium: #dc2626;
+
+  --warning-light: #443c1a;
+  --warning-primary: #f5d90a;
+  --warning-medium: #e4db8b;
+
+  --info-light: #2b3345;
+  --info-primary: #60a5fa;
+  --info-medium: #148cf5;
+}
+
+:root {
+  /* Typography */
+  --h1: 600 5rem/5.5rem "Inter Variable", sans-serif;
+  --h2: 600 3.75rem/4.5rem "Inter Variable", sans-serif;
+  --h3: 600 3rem/3.5rem "Inter Variable", sans-serif;
+  --h4: 600 2.25rem/2.75rem "Inter Variable", sans-serif;
+  --h5: 600 1.5rem/2rem "Inter Variable", sans-serif;
+  --h6: 600 1.25rem/1.75rem "Inter Variable", sans-serif;
+
+  --subheadline-bold-large: 600 1.125rem/1.75rem "Inter Variable", sans-serif;
+  --subheadline-medium-large: 500 1.125rem/1.75rem "Inter Variable", sans-serif;
+
+  --subheadline-bold: 600 1rem/1.5rem "Inter Variable", sans-serif;
+  --subheadline-medium: 500 1rem/1.5rem "Inter Variable", sans-serif;
+
+  --body-bold: 600 1rem/1.625rem "Inter Variable", sans-serif;
+  --body-medium: 500 1rem/1.625rem "Inter Variable", sans-serif;
+  --body-regular: 400 1rem/1.625rem "Inter Variable", sans-serif;
+
+  --body-bold-small: 600 0.875rem/1.375rem "Inter Variable", sans-serif;
+  --body-medium-small: 500 0.875rem/1.375rem "Inter Variable", sans-serif;
+  --body-regular-small: 400 0.875rem/1.375rem "Inter Variable", sans-serif;
+
+  --caption-bold: 600 0.75rem/1.125rem "Inter Variable", sans-serif;
+  --caption-medium: 500 0.75rem/1.125rem "Inter Variable", sans-serif;
+  --caption-regular: 400 0.75rem/1.125rem "Inter Variable", sans-serif;
+
+  --overline: 600 0.688rem/0.75rem "Inter Variable", sans-serif;
+
+  --button-large: 600 1rem/1.5rem "Inter Variable", sans-serif;
+  --button-medium: 600 0.875rem/1rem "Inter Variable", sans-serif;
+  --button-small: 600 0.813rem/0.75rem "Inter Variable", sans-serif;
+
+  /* Elevation */
+  --xs: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 5px 4px -4px rgba(0, 0, 0, 0.02);
+  --sm: 0px 2px 2px rgba(0, 0, 0, 0.08), 0px 0px 2px rgba(0, 0, 0, 0.04);
+  --md: 0px 12px 12px -8px rgba(0, 0, 0, 0.08), 0px 0px 4px rgba(0, 0, 0, 0.04);
+  --lg: 0px 32px 40px -16px rgba(0, 0, 0, 0.12), 0px 2px 6px rgba(0, 0, 0, 0.06);
+  --xl: 0px 24px 48px -8px rgba(0, 0, 0, 0.12), 0px 48px 64px -24px rgba(0, 0, 0, 0.12);
+
+  /* Corner Radia */
+  --large: 12px;
+  --medium: 8px;
+  --small: 6px;
+  --tiny: 4px;
+
+  /* z-index layers */
+  --layer-base: 0;
+  --layer-sheet: 10;
+  --layer-popover: 20;
+  --layer-tooltip: 30;
+  --layer-modal: 90;
+  --layer-topmost: 100;
+
+  @media (prefers-color-scheme: light) {
+    @include theme-light();
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include theme-dark();
+  }
+
+  &[data-theme="light"] {
+    @include theme-light();
+  }
+
+  &[data-theme="dark"] {
+    @include theme-dark();
+  }
+}
+
+* {
+  box-sizing: border-box;
+
+  transition-property: none;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+}
+
+body {
+  margin: 0;
+
+  font: var(--body-regular);
+  color: var(--text-primary);
+  background-color: var(--background-surface);
+}
